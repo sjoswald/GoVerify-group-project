@@ -1,0 +1,29 @@
+{
+  "name": "goverify",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "jest-test": "jest",
+    "start": "node server.js",
+    "devStart": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sjoswald/GoVerify-group-project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sjoswald/GoVerify-group-project/issues"
+  },
+  "homepage": "https://github.com/sjoswald/GoVerify-group-project#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  },
+  "devDependencies": {
+    "jest": "^28.1.3",
+    "nodemon": "^2.0.19"
+  }
+}
