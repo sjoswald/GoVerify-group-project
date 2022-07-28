@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en" class="govuk-template ">
+<html lang="en" class="govuk-template">
 
 <head>
   <meta charset="utf-8">
-  <title>Start Page</title>
+  <title>Consent</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#0b0c0c">
 
@@ -63,7 +63,72 @@
 
   <div class="govuk-width-container ">
     <main class="govuk-main-wrapper " id="main-content" role="main">
-      <h1 class="govuk-heading-xl">Default page template</h1>
+      <h1 id="heading" class="govuk-heading-xl">Storing your documents</h1>
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          
+          <p id="lead-para" class="govuk-body-l">In this section you can upload your identity documents.</p>
+          
+          <p class="govuk-body">This will allow you to quickly and easily apply for the council services you need, without having to provide these documents separately for each service. All data will be securely held in accordance with GDPR regulations. You can read our security and GDPR procedures <a href="/" id="security-gdpr-link" class="govuk-link">here</a>.</p>
+          
+          <p class="govuk-body">If you would prefer not to upload your documents, you can skip this step. You will be asked to provide your documents by each service you apply for.</p>
+          
+          <p class="govuk-body">You can upload the following documents:
+            <ul class="govuk-list govuk-list--bullet">
+              <li>Passport</li>
+              <li>Driving license</li>
+              <li>Proof of address</li>
+            </ul>
+          </p>
+
+          <p class="govuk-body">You can find a list of council services and the documents they require <a href="/" id="required-documents-link" class="govuk-link">here</a>.</p>
+
+        </div>
+      </div>
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="consent-hint">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                <h1 class="govuk-fieldset__heading">
+                  <!-- missing heading. See https://design-system.service.gov.uk/components/checkboxes/ -->
+                </h1>
+              </legend>
+              <div id="consent-hint" class="govuk-hint">
+                <!-- missing hint. See https://design-system.service.gov.uk/components/checkboxes/ -->
+              </div>
+              <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="checkbox-consent-stored" name="consent" type="checkbox" value="consent-stored">
+                  <label class="govuk-label govuk-checkboxes__label" for="consent-stored">
+                    I understand and agree that my documents will be stored by Fictional City Council.
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="checkbox-consent-used" name="consent" type="checkbox" value="consent-used">
+                  <label class="govuk-label govuk-checkboxes__label" for="consent-used">
+                    I understand and agree that my documents may be used for any council services I apply for.
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+    
+          <div class="govuk-button-group">
+            <button id="btn-continue" class="govuk-button" data-module="govuk-button">
+              Continue to upload
+            </button>
+          
+            <button id="btn-skip-upload" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+              Skip upload & sign out
+            </button>
+          </div>
+
+        </div>
+      </div>
+
     </main>
   </div>
 
