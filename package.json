@@ -7,7 +7,11 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "cypress:open": "cypress open",
     "start": "node server.js",
-    "devStart": "nodemon server.js"
+    "dev": "nodemon . & npm run scss",
+    "scss": "sass --watch src/scss/main.scss public/styles/main.css",
+    "cypress:run": "cypress run",
+    "server": "node src/server.js",
+    "e2e": "start-server-and-test server http://localhost:3000 cypress:run"
   },
   "repository": {
     "type": "git",
@@ -20,10 +24,14 @@
   },
   "homepage": "https://github.com/sjoswald/GoVerify-group-project#readme",
   "dependencies": {
-    "express": "^4.18.1"
+    "express": "^4.18.1",
+    "govuk-frontend": "^4.2.0",
+    "nunjucks": "^3.2.3",
+    "sass": "^1.54.0"
   },
   "devDependencies": {
     "cypress": "^10.3.1",
-    "nodemon": "^2.0.19"
+    "nodemon": "^2.0.19",
+    "start-server-and-test": "^1.14.0"
   }
 }
