@@ -9,4 +9,8 @@ app.get('/', (req, res) => {
 res.sendFile(path.join(__dirname, 'pages/index.html'))
 })
 
+app.get('/consent', (req, res) => {
+res.sendFile(path.join(__dirname, 'pages/consent.html'))
+})
+
 app.listen (process.env.PORT || 3000)
