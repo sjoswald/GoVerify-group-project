@@ -13,4 +13,8 @@ app.get('/consent', (req, res) => {
 res.sendFile(path.join(__dirname, 'pages/consent.html'))
 })
 
+app.get('/personal-details', (req, res) => {
+    res.sendFile(path.join(__dirname, 'pages/personal_details.html'))
+    })
+
 app.listen (process.env.PORT || 3000)
