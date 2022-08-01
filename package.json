@@ -11,7 +11,8 @@
     "scss": "sass --watch src/scss/main.scss public/styles/main.css",
     "cypress:run": "cypress run",
     "server": "node src/server.js",
-    "e2e": "start-server-and-test server http://localhost:3000 cypress:run"
+    "e2e": "start-server-and-test server http://localhost:3000 cypress:run",
+    "ci": "start-server-and-test server http://localhost:3000 cypress:run"
   },
   "repository": {
     "type": "git",
