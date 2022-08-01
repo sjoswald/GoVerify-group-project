@@ -38,7 +38,7 @@ res.sendFile(path.join(__dirname, 'pages/your_documents.html'))
 })
 
 app.get('/homepage', (req, res) => {
-    res.sendFile(path.join(__dirname, 'pages/fictional_city_council_homepage.html'))
-    })
+res.sendFile(path.join(__dirname, 'pages/fictional_city_council_homepage.html'))
+})
 
 app.listen (process.env.PORT || 3000)
