@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>GOV.UK - The best place to find government services and information</title>
+  <title>Capturing your ID</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#0b0c0c">
 
@@ -18,6 +18,7 @@
 
   <!--[if !IE 8]><!-->
   <link href="/public/styles/main.css" rel="stylesheet">
+  <link rel="stylesheet" href="/public/styles/upload_rules.css">
   <!--<![endif]-->
 
   <!--[if IE 8]>
@@ -63,36 +64,45 @@
 
   <div class="govuk-width-container ">
     <main class="govuk-main-wrapper " id="main-content" role="main">
-      <h1 class="govuk-heading-xl">Capturing your ID document</h1>
+      <h1 id="upload-rules-heading" class="govuk-heading-xl">Capturing your ID document</h1>
+
+      <p id="upload-rules-lead-para" class="govuk-body-l">The photo you upload will need to match the following criteria:</p>
 
       <div class="govuk-grid-column-one-half">
         <img src="/public/assets/images/passportspecimen.png" alt="">
       </div>
 
       <div class="govuk-grid-column-one-half">
-          <ul class="govuk-list govuk-list--bullet">
-            <li><img src="/public/assets/images/Eo_circle_green_checkmark.svg.png" alt=""></li>
-            <li><img src="/public/assets/images/Eo_circle_green_checkmark.svg.png" alt=""></li>
-            <li><img src="/public/assets/images/Eo_circle_green_checkmark.svg.png" alt=""></li>
+          <ul class="govuk-list govuk-list govuk-!-padding-left-7">
+            <li class="govuk-!-font-size-24 govuk-!-padding-top-5"><img class="checkmark govuk-!-padding-right-2" src="/public/assets/images/Eo_circle_green_checkmark.svg.png" alt="">Shows all detail</li govuk-!-font-size-24>
+            <li class="govuk-!-font-size-24 govuk-!-padding-top-5"><img class="checkmark govuk-!-padding-right-2" src="/public/assets/images/Eo_circle_green_checkmark.svg.png" alt="">Isn't covered by anything</li>
+            <li class="govuk-!-font-size-24 govuk-!-padding-top-5"><img class="checkmark govuk-!-padding-right-2" src="/public/assets/images/Eo_circle_green_checkmark.svg.png" alt="">Is clear and in focus</li>
           </ul>
       </div>
 
-      <div>
-        <img src="/public/assets/images/passportangle.png" alt="">
-        <img src="/public/assets/images/passportcovered.png" alt="">
-        <img src="/public/assets/images/passportblurred.png" alt="">
-      </div>
-      
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+          
+          <div class="guide-images govuk-!-padding-top-7 govuk-!-padding-bottom-7">
+            <img  src="/public/assets/images/passportangle.png" alt="">
+            <img src="/public/assets/images/passportcovered.png" alt="">
+            <img src="/public/assets/images/passportblurred.png" alt="">
+          </div>
+          
+    
+          <div class="govuk-button-group">
+            <button id="upload-rules-btn-continue" class="govuk-button" data-module="govuk-button">
+              Continue to upload
+            </button>
+          
+            <button id="upload-rules-btn-skip-upload" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+              Skip upload & sign out
+            </button>
+          </div>
 
-      <div class="govuk-button-group">
-        <button id="btn-continue" class="govuk-button" data-module="govuk-button">
-          Continue to upload
-        </button>
-      
-        <button id="btn-skip-upload" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-          Skip upload & sign out
-        </button>
+        </div>
       </div>
+
     </main>
   </div>
 
