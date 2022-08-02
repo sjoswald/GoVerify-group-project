@@ -68,30 +68,64 @@
       <div class="govuk-grid-row">
           <div class="govuk-grid-column-two-thirds">
             <div class="govuk-form-group">
+              <div class="govuk-!-padding-bottom-5">
+                <label class="govuk-label" for="full-name" id="label-pd-name">
+                  Full name
+                </label>
+                <input class="govuk-input" id="input-pd-name" name="full-name" type="text" spellcheck="false" autocomplete="name">
+              </div>
 
-              <label class="govuk-label" for="full-name" id="label-pd-name">
-                Full name
-              </label>
-              <input class="govuk-input" id="input-pd-name" name="full-name" type="text" spellcheck="false" autocomplete="name">
-              
-              <label class="govuk-label" for="email" id="label-pd-email">
-                Email address
-              </label>
-              <!-- <div id="email-hint" class="govuk-hint">
-                We’ll only use this to send you a receipt
-              </div> -->
-              <input class="govuk-input" id="input-pd-email" name="email" type="email" spellcheck="false" aria-describedby="email-hint" autocomplete="email">
+              <div class="govuk-!-padding-bottom-5">
+                <label class="govuk-label" for="email" id="label-pd-email">
+                  Email address
+                </label>
+                <!-- <div id="email-hint" class="govuk-hint">
+                  We’ll only use this to send you a receipt
+                </div> -->
+                <input class="govuk-input" id="input-pd-email" name="email" type="email" spellcheck="false" aria-describedby="email-hint" autocomplete="email">
+              </div>
 
-              <label class="govuk-label" for="password" id="label-pd-password">
-                Create password
-              </label>
-              <input class="govuk-input" id="input-pd-password" name="password" type="password" spellcheck="false" autocomplete="name">
-              
-              <label class="govuk-label" for="confirm-password" id="label-pd-confirm-password">
-                Confirm password
-              </label>
-              <input class="govuk-input" id="input-pd-confirm-password" name="confirm-password" type="password" spellcheck="false" autocomplete="name">
-              
+              <div class="govuk-!-padding-bottom-2">
+                <label class="govuk-label" for="password" id="label-pd-password">
+                  Create password
+                </label>
+                <input class="govuk-input" id="input-pd-password" name="password" type="password" spellcheck="false" autocomplete="name" minlength="8" required>
+              </div>
+
+              <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="checkbox-pd-show-password" name="show-password" type="checkbox" onclick="ShowPasswordFunctionality()" value="show-password">
+                  <label class="govuk-label govuk-checkboxes__label" for="show-password">
+                    Show password
+                  </label>
+                </div>
+              </div>
+
+              <details class="govuk-details" data-module="govuk-details" id="details-pd-password-info">
+                <summary class="govuk-details__summary" id="details-pd-password-summary">
+                  <span class="govuk-details__summary-text">
+                    Choosing your password
+                  </span>
+                </summary>
+                <div class="govuk-details__text" id="details-pd-password-text">
+                  Your password needs to contain at least 8 characters, be a mixture of uppercase and lowercase letters, contain at least one number, and contain at least one special character.
+                </div>
+              </details>
+
+              <div class="govuk-!-padding-bottom-2">
+                <label class="govuk-label" for="confirm-password" id="label-pd-confirm-password">
+                  Confirm password
+                </label>
+                <input class="govuk-input" id="input-pd-confirm-password" name="confirm-password" type="password" spellcheck="false" autocomplete="name">
+              </div>
+
+              <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="checkbox-pd-show-confirm-password" name="show-confirm-password" type="checkbox" onclick="ShowPasswordFunctionality()" value="show-confirm-password">
+                  <label class="govuk-label govuk-checkboxes__label" for="show-confirm-password">
+                    Show password
+                  </label>
+                </div>
             </div>
 
           </div>
@@ -99,8 +133,8 @@
          
       <div class="govuk-grid-row">
         <div class="govuk-grid-column-full">
-          <button class="govuk-button" data-module="govuk-button" id = "btn-signin">
-              Sign in
+          <button class="govuk-button" data-module="govuk-button" id = "btn-pd-save">
+              Save and continue
           </button>
         </div>
       </div>

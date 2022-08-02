@@ -48,3 +48,6 @@ I have grouped the two buttons on the consent page to fit in with the design sys
 From: https://design-system.service.gov.uk/components/error-message/
 
 We will need an error message when users do not select consent checkboxes. How would you like us to word this?
+
+
+What details do we want to ask for when the users create an account? What alternative means of contact should we use for users without an email address? (e.g. for forgotten passwords)
