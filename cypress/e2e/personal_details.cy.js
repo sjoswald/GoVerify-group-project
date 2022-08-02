@@ -13,16 +13,16 @@ describe('testing the personal details page loads', () => {
     })
 
     it("should have a name field", () => {
-        cy.get('#name-label').contains('Full name')
-        cy.get('#name-label').should('have.class', 'govuk-label')
-        cy.get('#name-field').should('have.class', 'govuk-input')
+        cy.get('#label-pd-name').contains('Full name')
+        cy.get('#label-pd-name').should('have.class', 'govuk-label')
+        cy.get('#input-pd-name').should('have.class', 'govuk-input')
         cy.get('input[name="full-name"]').type('Joshi').should('have.value','Joshi')
         })
 
     it("should have an email field", () => {
-        cy.get('#email-label').contains('Email address')
-        cy.get('#email-label').should('have.class', 'govuk-label')
-        cy.get('#email-field').should('have.class', 'govuk-input')
+        cy.get('#label-pd-email').contains('Email address')
+        cy.get('#label-pd-email').should('have.class', 'govuk-label')
+        cy.get('#input-pd-email').should('have.class', 'govuk-input')
         cy.get('input[name="email"]').type('fake_email@mail.com').should('have.value','fake_email@mail.com')
         })
 
