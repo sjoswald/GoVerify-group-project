@@ -17,7 +17,7 @@
   <link rel="apple-touch-icon" href="/assets/images/govuk-apple-touch-icon.png">
 
   <!--[if !IE 8]><!-->
-  <link href="/styles/main.css" rel="stylesheet">
+  <link href="/public/styles/main.css" rel="stylesheet">
   <!--<![endif]-->
 
   <!--[if IE 8]>
@@ -63,7 +63,17 @@
 
   <div class="govuk-width-container ">
     <main class="govuk-main-wrapper " id="main-content" role="main">
-      <h1 class="govuk-heading-xl">Default page template</h1>
+      <h1 class="govuk-heading-xl">Capturing your ID document</h1>
+
+      <div class="govuk-button-group">
+        <button id="btn-continue" class="govuk-button" data-module="govuk-button">
+          Continue to upload
+        </button>
+      
+        <button id="btn-skip-upload" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+          Skip upload & sign out
+        </button>
+      </div>
     </main>
   </div>
 
