@@ -48,3 +48,7 @@ I have grouped the two buttons on the consent page to fit in with the design sys
 From: https://design-system.service.gov.uk/components/error-message/
 
 We will need an error message when users do not select consent checkboxes. How would you like us to word this?
+
+7. From: https://design-system.service.gov.uk/styles/images/
+
+What alt text would you like us to add to the images on the upload rules page?
