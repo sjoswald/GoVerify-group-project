@@ -1,7 +1,7 @@
 {
   "name": "goverify",
   "version": "1.0.0",
-  "description": "",
+  "description": "Group 4 Made Tech software engineering academy project.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
