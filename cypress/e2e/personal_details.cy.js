@@ -26,6 +26,23 @@ describe('testing the personal details page loads', () => {
         cy.get('input[name="email"]').type('fake_email@mail.com').should('have.value','fake_email@mail.com')
         })
 
+    it("should have a create password field", () => {
+      // check password strength?
+      cy.get('#label-pd-password').contains('Create password')
+      cy.get('#label-pd-password').should('have.class', 'govuk-label')
+      cy.get('#input-pd-password').should('have.class', 'govuk-input')
+      cy.get('input[name="password"]').type('password123').should('have.value','password123')
+      })
+
+    it("should have a confirm password field", () => {
+      cy.get('#label-pd-confirm-password').contains('Confirm password')
+      cy.get('#label-pd-confirm-password').should('have.class', 'govuk-label')
+      cy.get('#input-pd-confirm-password').should('have.class', 'govuk-input')
+      cy.get('input[name="confirm-password"]').type('password123').should('have.value','password123')
+      })
+
+      // test - two passwords whould match - otherwise error message
+
     })
 
 
