@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>GOV.UK - The best place to find government services and information</title>
+  <title>Document Type</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#0b0c0c">
 
@@ -63,7 +63,27 @@
 
   <div class="govuk-width-container ">
     <main class="govuk-main-wrapper " id="main-content" role="main">
-      <h1 class="govuk-heading-xl">Default page template</h1>
+      <h1 class="govuk-heading-xl" id="hd-doc-type">Document Type</h1>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="sort">
+          Choose which document you would like to upload
+        </label>
+        <select class="govuk-select" id="sort-doc-type" name="sort">
+          <option value="passport" selected>Passport</option>
+          <option value="licence">Driving licence</option>
+          <option value="address">Proof of address</option>
+        </select>
+      </div>
+
+      <div class="govuk-button-group">
+        <a href="/upload-rules">
+        <button id="btn-doc-type-continue" class="govuk-button" data-module="govuk-button">
+          Continue to upload
+        </button>
+        </a>
+      </div>
+
     </main>
   </div>
 
