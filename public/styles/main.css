@@ -6771,26 +6771,26 @@ x:-moz-any-link {
   }
 }
 
-img {
+.upload-page img {
   width: 100%;
 }
 
-img.checkmark {
+.upload-page img.checkmark {
   width: 10%;
 }
 
-li {
+.upload-page li {
   display: flex;
   align-items: center;
 }
 
-.guide-images {
+.upload-page .guide-images {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
 
-.guide-images img {
+.upload-page .guide-images img {
   width: 300px;
 }
 
