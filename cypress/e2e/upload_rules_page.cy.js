@@ -34,4 +34,12 @@ describe('page contents', () => {
         cy.get('#upload-rules-btn-skip-upload').should('have.class', 'govuk-button')
         cy.get('#upload-rules-btn-skip-upload').contains('Skip upload & sign out')
     })
+
+    it('Tests for broken images', () => {
+      cy.get('img').each(($img) => {
+      cy.wrap($img).scrollIntoView().should('be.visible');
+      expect($img[0].naturalWidth).to.be.greaterThan(0);
+      expect($img[0].naturalHeight).to.be.greaterThan(0);
+      });
+      })
 })

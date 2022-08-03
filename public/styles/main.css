@@ -6771,4 +6771,54 @@ x:-moz-any-link {
   }
 }
 
+.upload-page img {
+  width: 100%;
+}
+
+.upload-page img.checkmark {
+  width: 10%;
+}
+
+.upload-page li {
+  display: flex;
+  align-items: center;
+}
+
+.upload-page .guide-images {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.upload-page .guide-images img {
+  width: 300px;
+}
+
+.your-documents img {
+  width: 100%;
+}
+
+.your-documents img.checkmark {
+  width: 50%;
+}
+
+.your-documents li {
+  display: flex;
+  align-items: center;
+}
+
+.your-documents .guide-images {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.your-documents .guide-images img {
+  width: 150px;
+}
+
+.your-documents td {
+  vertical-align: center;
+}
+
 /*# sourceMappingURL=main.css.map */

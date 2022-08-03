@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>GOV.UK - The best place to find government services and information</title>
+  <title>Your Documents</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#0b0c0c">
 
@@ -62,11 +62,53 @@
   </header>
 
   <div class="govuk-width-container ">
-    <main class="govuk-main-wrapper " id="main-content" role="main">
-      <h1 class="govuk-heading-xl">Default page template</h1>
-      <button id="yd-btn-services" class="govuk-button" data-module="govuk-button" onclick="window.location.href = '/homepage';">
-        Go to council services
+    <main class="govuk-main-wrapper your-documents" id="main-content" role="main">
+      <h1 class="govuk-heading-xl" id="hd-your-doc">Your Documents</h1>
+
+      <table class="govuk-table" id="tbl-your-doc-documents">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header govuk-!-width-one-third">Document image</th>
+            <th scope="col" class="govuk-table__header">Upload date</th>
+            <th scope="col" class="govuk-table__header">Expiry date</th>
+            <th scope="col" class="govuk-table__header">View</th>
+            <th scope="col" class="govuk-table__header">Delete</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__cell"><img src="/assets/images/passportspecimen.png" alt=""></th>
+            <td class="govuk-table__cell">2022-01-12</td>
+            <td class="govuk-table__cell">2026-10-02</td>
+            <td class="govuk-table__cell"><button class="govuk-button" id="btn-your-doc-view1" data-module="govuk-button">
+              View
+            </button></td>
+            <td class="govuk-table__cell"><button class="govuk-button govuk-button--warning" id="btn-your-doc-delete1" data-module="govuk-button">
+              Delete
+            </button></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <a href="/document-type">
+      <button class="govuk-button" id="btn-your-doc-add-doc" data-module="govuk-button">
+        Add another document
       </button>
+      </a>
+
+      <p class="govuk-body-l" id = "para-your-doc-explanation">Your documents have been saved and can be seen by the council when you apply for a service.</p>
+
+      <p class="govuk-body-l" id = "para-your-doc-next-steps">What would you like to do next?</p>
+
+      <div class="govuk-button-group">
+        <button class="govuk-button" id="btn-your-doc-sign-out" data-module="govuk-button" onclick="window.location.href = '/';">
+          Sign out
+        </button>
+        
+        <button id="btn-your-doc-council-services" class="govuk-button" data-module="govuk-button" onclick="window.location.href = '/homepage';">
+        Go to council services
+        </button>
+      </div>
     </main>
   </div>
 
