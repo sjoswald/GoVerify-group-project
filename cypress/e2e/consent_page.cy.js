@@ -29,11 +29,6 @@ describe('page contents', () => {
         cy.get('#consent-required-documents-link').contains('here')
     })
 
-    it('has a continue button', () => {
-        cy.get('#consent-btn-continue').should('have.class', 'govuk-button')
-        cy.get('#consent-btn-continue').contains('Continue to upload')
-    })
-
     it('has a skip upload button', () => {
         cy.get('#consent-btn-skip-upload').should('have.class', 'govuk-button')
         cy.get('#consent-btn-skip-upload').contains('Skip upload & sign out')
@@ -44,4 +39,15 @@ describe('page contents', () => {
         cy.get('#consent-checkbox-used').should('have.class', 'govuk-checkboxes__input')
         cy.get('fieldset input').check(['consent-stored', 'consent-used'])
     })
+
+    it('has a continue button', () => {
+      cy.get('#consent-btn-continue').should('have.class', 'govuk-button')
+      cy.get('#consent-btn-continue').contains('Continue to upload')
+  })
+
+  it('continue button leads to document type page', () => {
+    cy.get('#consent-btn-continue').click()
+    cy.location('pathname').should('eq', '/document-type')
+  })
+
 })

@@ -25,7 +25,7 @@ app.get('/upload-rules', (req, res) => {
 res.sendFile(path.join(__dirname, 'pages/upload_rules.html'))
 })
 
-app.get('/upload', (req, res) => {
+app.get('/document-upload', (req, res) => {
 res.sendFile(path.join(__dirname, 'pages/document_upload.html'))
 })
 

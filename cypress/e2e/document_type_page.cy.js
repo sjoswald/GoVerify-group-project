@@ -20,13 +20,13 @@ describe('testing the start page loads', () => {
         cy.get('#sort-doc-type').select('licence')
     })
 
-    it('has a continue button', () => {
+      it('has a continue button', () => {
         cy.get('#btn-doc-type-continue').should('have.class', 'govuk-button')
         cy.get('#btn-doc-type-continue').contains('Continue to upload')
     })
 
-    it("takes you to /upload-rules", () => {
+      it('continue button leads to upload rules page', () => {
         cy.get('#btn-doc-type-continue').click()
-        cy.url().should('include', '/upload-rules')
+        cy.location('pathname').should('eq', '/upload-rules')
       })
 })
