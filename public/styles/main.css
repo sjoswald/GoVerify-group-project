@@ -6794,4 +6794,31 @@ x:-moz-any-link {
   width: 300px;
 }
 
+.your-documents img {
+  width: 100%;
+}
+
+.your-documents img.checkmark {
+  width: 50%;
+}
+
+.your-documents li {
+  display: flex;
+  align-items: center;
+}
+
+.your-documents .guide-images {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.your-documents .guide-images img {
+  width: 150px;
+}
+
+.your-documents td {
+  vertical-align: center;
+}
+
 /*# sourceMappingURL=main.css.map */

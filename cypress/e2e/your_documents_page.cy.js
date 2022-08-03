@@ -48,12 +48,9 @@ describe('testing the start page loads', () => {
         cy.get('#btn-your-doc-sign-out').click()
         cy.url().should('include', '/')
       })
-    
-    it('can load a webpage', () => {
-    cy.visit('http://localhost:3000/your-documents')
-    })
 
     it('has a council services button', () => {
+        cy.visit('http://localhost:3000/your-documents')
         cy.get('#btn-your-doc-council-services').should('have.class', 'govuk-button')
         cy.get('#btn-your-doc-council-services').contains('Go to council services')
     })
@@ -62,4 +59,23 @@ describe('testing the start page loads', () => {
         cy.get('#btn-your-doc-council-services').click()
         cy.url().should('include', '/homepage')
         })
+})
+
+describe('table tests', () => {
+  it('has a table', () => {
+    cy.visit('http://localhost:3000/your-documents')
+    cy.get('table').contains('th', 'Upload date')
+  })
+
+  it('has a view document button', () => {
+    cy.visit('http://localhost:3000/your-documents')
+    cy.get('#tbl-your-doc-documents').contains('td', 'View')
+    cy.get('#btn-your-doc-view1').should('have.class', 'govuk-button')
+  })
+
+  it('has a delete document button', () => {
+    cy.visit('http://localhost:3000/your-documents')
+    cy.get('#tbl-your-doc-documents').contains('td', 'Delete')
+    cy.get('#btn-your-doc-delete1').should('have.class', 'govuk-button govuk-button--warning')
+  })
 })
