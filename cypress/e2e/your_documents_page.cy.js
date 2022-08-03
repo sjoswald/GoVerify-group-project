@@ -46,19 +46,19 @@ describe('testing the start page loads', () => {
 
     it("takes you to /", () => {
         cy.get('#btn-your-doc-sign-out').click()
-        cy.url().should('include', '/')
+        cy.url().should('eq', '/')
       })
 
-    it('has a council services button', () => {
-        cy.visit('http://localhost:3000/your-documents')
+     it('has a save and proceed button', () => {
         cy.get('#btn-your-doc-council-services').should('have.class', 'govuk-button')
         cy.get('#btn-your-doc-council-services').contains('Go to council services')
     })
 
-    it("takes you to /homepage", () => {
-        cy.get('#btn-your-doc-council-services').click()
-        cy.url().should('include', '/homepage')
-        })
+    it('continue to upload button leads to document upload page', () => {
+      cy.get('#btn-your-doc-council-services').click()
+      cy.location('pathname').should('eq', '/homepage')
+      cy.go('back')
+    })
 })
 
 describe('table tests', () => {

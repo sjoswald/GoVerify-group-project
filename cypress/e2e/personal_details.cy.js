@@ -41,11 +41,6 @@ describe('testing the personal details page loads', () => {
       cy.get('input[name="confirm-password"]').type('password123').should('have.value','password123')
       })
 
-    it('has a "Save and continue" button', () => {
-      cy.get('#btn-pd-save').should('have.class', 'govuk-button')
-      cy.get('#btn-pd-save').contains('Save and continue')
-    })
-
     it('has show password checkbox', () => {
       cy.get('#checkbox-pd-show-password').should('have.class', 'govuk-checkboxes__input')
     })
@@ -61,6 +56,16 @@ describe('testing the personal details page loads', () => {
       cy.get('#details-pd-password-summary').contains('Choosing your password')
       cy.get('#details-pd-password-text').should('have.class', 'govuk-details__text')
       cy.get('#details-pd-password-text').contains('Your password needs to')
+    })
+
+    it('has a "Save and continue" button', () => {
+      cy.get('#btn-pd-save').should('have.class', 'govuk-button')
+      cy.get('#btn-pd-save').contains('Save and continue')
+    })
+
+    it('save and continue button takes you to the consent page', () => {
+      cy.get('#btn-pd-save').click()
+      cy.location('pathname').should('eq', '/consent')
     })
 
     })

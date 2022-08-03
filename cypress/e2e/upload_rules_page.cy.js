@@ -24,6 +24,12 @@ describe('page contents', () => {
         cy.get('#upload-rules-btn-continue').contains('Continue to upload')
     })
 
+    it('continue to upload button leads to document upload page', () => {
+      cy.get('#upload-rules-btn-continue').click()
+      cy.location('pathname').should('eq', '/document-upload')
+      cy.go('back')
+    })
+
     it('has a skip upload button', () => {
         cy.get('#upload-rules-btn-skip-upload').should('have.class', 'govuk-button')
         cy.get('#upload-rules-btn-skip-upload').contains('Skip upload & sign out')

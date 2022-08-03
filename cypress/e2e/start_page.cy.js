@@ -33,4 +33,11 @@ describe('page contents', () => {
     cy.get('#btn-create-acc').should('have.class', 'govuk-button')
     cy.get('#btn-create-acc').contains('Create an account')
   })
+
+  it('create account button takes you to the personal details page', () => {
+    cy.get('#btn-create-acc').click()
+    cy.location('pathname').should('eq', '/personal-details')
+  })
+
+  
 })
