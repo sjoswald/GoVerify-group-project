@@ -6771,4 +6771,27 @@ x:-moz-any-link {
   }
 }
 
+img {
+  width: 100%;
+}
+
+img.checkmark {
+  width: 10%;
+}
+
+li {
+  display: flex;
+  align-items: center;
+}
+
+.guide-images {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.guide-images img {
+  width: 300px;
+}
+
 /*# sourceMappingURL=main.css.map */
