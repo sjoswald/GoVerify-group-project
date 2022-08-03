@@ -13,18 +13,55 @@ describe('testing the personal details page loads', () => {
     })
 
     it("should have a name field", () => {
-        cy.get('#name-label').contains('Full name')
-        cy.get('#name-label').should('have.class', 'govuk-label')
-        cy.get('#name-field').should('have.class', 'govuk-input')
+        cy.get('#label-pd-name').contains('Full name')
+        cy.get('#label-pd-name').should('have.class', 'govuk-label')
+        cy.get('#input-pd-name').should('have.class', 'govuk-input')
         cy.get('input[name="full-name"]').type('Joshi').should('have.value','Joshi')
         })
 
     it("should have an email field", () => {
-        cy.get('#email-label').contains('Email address')
-        cy.get('#email-label').should('have.class', 'govuk-label')
-        cy.get('#email-field').should('have.class', 'govuk-input')
+        cy.get('#label-pd-email').contains('Email address')
+        cy.get('#label-pd-email').should('have.class', 'govuk-label')
+        cy.get('#input-pd-email').should('have.class', 'govuk-input')
         cy.get('input[name="email"]').type('fake_email@mail.com').should('have.value','fake_email@mail.com')
         })
+
+    it("should have a create password field", () => {
+      // check password strength?
+      cy.get('#label-pd-password').contains('Create password')
+      cy.get('#label-pd-password').should('have.class', 'govuk-label')
+      cy.get('#input-pd-password').should('have.class', 'govuk-input')
+      cy.get('input[name="password"]').type('password123').should('have.value','password123')
+      })
+
+    it("should have a confirm password field", () => {
+      cy.get('#label-pd-confirm-password').contains('Confirm password')
+      cy.get('#label-pd-confirm-password').should('have.class', 'govuk-label')
+      cy.get('#input-pd-confirm-password').should('have.class', 'govuk-input')
+      cy.get('input[name="confirm-password"]').type('password123').should('have.value','password123')
+      })
+
+    it('has a "Save and continue" button', () => {
+      cy.get('#btn-pd-save').should('have.class', 'govuk-button')
+      cy.get('#btn-pd-save').contains('Save and continue')
+    })
+
+    it('has show password checkbox', () => {
+      cy.get('#checkbox-pd-show-password').should('have.class', 'govuk-checkboxes__input')
+    })
+
+    it('has show password checkbox for confirm password field', () => {
+      cy.get('#checkbox-pd-show-confirm-password').should('have.class', 'govuk-checkboxes__input')
+    })
+      // test - two passwords should match - otherwise error message
+
+    it('has details about choosing a password', () => {
+      cy.get('#details-pd-password-info').should('have.class', 'govuk-details')
+      cy.get('#details-pd-password-summary').should('have.class', 'govuk-details__summary')
+      cy.get('#details-pd-password-summary').contains('Choosing your password')
+      cy.get('#details-pd-password-text').should('have.class', 'govuk-details__text')
+      cy.get('#details-pd-password-text').contains('Your password needs to')
+    })
 
     })
 
