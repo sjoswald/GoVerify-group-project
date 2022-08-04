@@ -44,9 +44,14 @@ describe('testing the start page loads', () => {
         cy.get('#btn-your-doc-sign-out').contains('Sign out')
     })
 
+    it('can load a webpage', () => {
+      cy.visit('http://localhost:3000/your-documents')
+    })
+
     it("takes you to /", () => {
         cy.get('#btn-your-doc-sign-out').click()
-        cy.url().should('eq', '/')
+        cy.location('pathname').should('eq', '/')
+        cy.go('back')
       })
 
      it('has a save and proceed button', () => {
