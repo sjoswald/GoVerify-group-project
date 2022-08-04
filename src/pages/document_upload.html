@@ -141,10 +141,11 @@
   <script src="/assets/filepond/filepond-plugin-image-exif-orientation.js"></script>
   <script src="/assets/filepond/filepond-plugin-image-preview.js"></script>
   <script src="/assets/filepond/filepond-plugin-pdf-preview.js"></script>
+  <script src="/assets/filepond/filepond-plugin-file-validate-type.js"></script>
 
   <script>    
   // Register plugins with FilePond
-  FilePond.registerPlugin(FilePondPluginFileValidateSize, FilePondPluginImageExifOrientation, FilePondPluginImagePreview, FilePondPluginPdfPreview);
+  FilePond.registerPlugin(FilePondPluginFileValidateSize, FilePondPluginImageExifOrientation, FilePondPluginImagePreview, FilePondPluginPdfPreview, FilePondPluginFileValidateType);
 
   // Get a reference to the file input element
   const inputElement = document.querySelector('input[type="file"]');
@@ -155,6 +156,7 @@
    stylePanelAspectRatio: '3:2',
    maxFileSize: '16MB',
    pdfPreviewHeight: 600,
+   acceptedFileTypes: ['image/jpeg', 'image/png', 'application/pdf']
   });
 
 </script>
