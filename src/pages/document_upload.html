@@ -101,7 +101,7 @@
           </div>
     
           <div class="govuk-button-group">
-            <button id="upload-rules-btn-continue" class="govuk-button" data-module="govuk-button" onclick="window.location.href = '/review-upload';">
+            <button id="upload-rules-btn-continue" class="govuk-button" data-module="govuk-button" onclick="window.location.href = '/your-documents';">
               Save and proceed
             </button>
           
@@ -156,7 +156,8 @@
    stylePanelAspectRatio: '3:2',
    maxFileSize: '16MB',
    pdfPreviewHeight: 600,
-   acceptedFileTypes: ['image/jpeg', 'image/png', 'application/pdf']
+   acceptedFileTypes: ['image/jpeg', 'image/png', 'application/pdf'],
+   labelIdle: 'Drag & drop your file or <span class="filepond--label-action">Browse</span>',
   });
 
 </script>
