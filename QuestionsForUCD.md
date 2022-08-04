@@ -49,11 +49,14 @@ From: https://design-system.service.gov.uk/components/error-message/
 
 We will need an error message when users do not select consent checkboxes. How would you like us to word this?
 
-#<<<<<<< upload-rules
 7. From: https://design-system.service.gov.uk/styles/images/
 
 What alt text would you like us to add to the images on the upload rules page?
-=======
+
+8.
 
 What details do we want to ask for when the users create an account? What alternative means of contact should we use for users without an email address? (e.g. for forgotten passwords)
-#>>>>>>> main
+
+9. 
+
+On the upload your document page it seemed like we were doubling up with click below and then the file uploader also asking to drag & drop of browse so for the time being I have left this for you to advise.
