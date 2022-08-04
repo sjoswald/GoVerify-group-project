@@ -39,6 +39,6 @@ describe('page contents', () => {
 
     it('opens next page when clicking save & proceed', () => {
       cy.get('#upload-rules-btn-continue').click()
-      cy.location('pathname').should('eq', '/review-upload')
+      cy.location('pathname').should('eq', '/your-documents')
     })
 })
