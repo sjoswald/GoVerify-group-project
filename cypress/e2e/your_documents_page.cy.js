@@ -1,4 +1,4 @@
-describe('testing the start page loads', () => {
+describe('testing the your documents loads', () => {
     it('can load a webpage', () => {
       cy.visit('http://localhost:3000/your-documents')
     })
@@ -54,12 +54,12 @@ describe('testing the start page loads', () => {
         cy.go('back')
       })
 
-     it('has a save and proceed button', () => {
+     it('has a council services button', () => {
         cy.get('#btn-your-doc-council-services').should('have.class', 'govuk-button')
         cy.get('#btn-your-doc-council-services').contains('Go to council services')
     })
 
-    it('continue to upload button leads to document upload page', () => {
+    it('council services button leads to council services page', () => {
       cy.get('#btn-your-doc-council-services').click()
       cy.location('pathname').should('eq', '/homepage')
       cy.go('back')
