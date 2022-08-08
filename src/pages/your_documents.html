@@ -84,9 +84,14 @@
             <td class="govuk-table__cell"><button class="govuk-button" id="btn-your-doc-view1" data-module="govuk-button">
               View
             </button></td>
-            <td class="govuk-table__cell"><button class="govuk-button govuk-button--warning" id="btn-your-doc-delete1" data-module="govuk-button">
+            <td class="govuk-table__cell"><button class="govuk-button govuk-button--warning" id="btn-your-doc-delete1" data-module="govuk-button" onclick="deleteConfirm()">
               Delete
             </button></td>
+            <script>
+            function deleteConfirm() {
+              confirm("Warning! Please confirm you would like to delete your document, this action cannot be undone.");
+            }
+            </script>
           </tr>
         </tbody>
       </table>

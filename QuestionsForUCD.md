@@ -62,3 +62,7 @@ What details do we want to ask for when the users create an account? What altern
 On the upload your document page it seemed like we were doubling up with click below and then the file uploader also asking to drag & drop or browse so for the time being I have left this for you to advise.
 
 Also we had a discussion around browse not being very semantic so would like UCD opinion.
+
+10. 
+
+What functionality would you like the View button on the Your Documents page to have? Currently it does nothing as we aren't sure what you would like to happen when it is clicked.
