@@ -94,7 +94,7 @@
 
               <div class="govuk-checkboxes" data-module="govuk-checkboxes">
                 <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input" id="checkbox-pd-show-password" name="show-password" type="checkbox" onclick="ShowPasswordFunctionality()" value="show-password">
+                  <input class="govuk-checkboxes__input" id="checkbox-pd-show-password" name="show-password" type="checkbox" onclick="showPassword()" value="show-password">
                   <label class="govuk-label govuk-checkboxes__label" for="show-password">
                     Show password
                   </label>
@@ -126,7 +126,7 @@
 
               <div class="govuk-checkboxes" data-module="govuk-checkboxes">
                 <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input" id="checkbox-pd-show-confirm-password" name="show-confirm-password" type="checkbox" onclick="ShowPasswordFunctionality()" value="show-confirm-password">
+                  <input class="govuk-checkboxes__input" id="checkbox-pd-show-confirm-password" name="show-confirm-password" type="checkbox" onclick="showConfirmPassword()" value="show-confirm-password">
                   <label class="govuk-label govuk-checkboxes__label" for="show-confirm-password">
                     Show password
                   </label>
@@ -169,6 +169,7 @@
   </footer>
 
   <script src="./govuk.js"></script>
+  <script src="./javascript/personal_details.js"></script>
   <script>
     window.GOVUKFrontend.initAll()
 
