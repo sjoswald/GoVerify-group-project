@@ -64,7 +64,18 @@ describe('testing the your documents loads', () => {
       cy.location('pathname').should('eq', '/homepage')
       cy.go('back')
     })
-})
+  })
+
+    describe('Test delete button alert and the text displaying', () => {
+      it('Verify alert and its text content', () => {    
+          cy.get('button').contains('Delete').click()
+          cy.on('window:confirm', (str) => {
+            expect(str).to.equal(`Warning! Please confirm you would like to delete your document, this action cannot be undone.`)
+          })
+      
+        })
+    })
+
 
 describe('table tests', () => {
   it('has a table', () => {
