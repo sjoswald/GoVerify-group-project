@@ -35,6 +35,12 @@ describe('page contents', () => {
         cy.get('#upload-rules-btn-skip-upload').contains('Skip upload & sign out')
     })
 
+    it('has a skip upload and sign out button leading to the sign in page', () => {
+      cy.get('#upload-rules-btn-skip-upload').click()
+      cy.location('pathname').should('eq', '/')
+      cy.go('back')
+    })
+
     it('Tests for broken images', () => {
       cy.get('img').each(($img) => {
       cy.wrap($img).scrollIntoView().should('be.visible');
