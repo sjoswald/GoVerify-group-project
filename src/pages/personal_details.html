@@ -73,7 +73,7 @@
                 <label class="govuk-label" for="full-name" id="label-pd-name">
                   Full name
                 </label>
-                <input class="govuk-input" id="input-pd-name" name="full-name" type="text" spellcheck="false" autocomplete="name">
+                <input required="required" class="govuk-input" id="input-pd-name" name="full-name" type="text" spellcheck="false" autocomplete="name">
               </div>
 
               <div class="govuk-!-padding-bottom-5">
@@ -83,19 +83,19 @@
                 <!-- <div id="email-hint" class="govuk-hint">
                   We’ll only use this to send you a receipt
                 </div> -->
-                <input class="govuk-input" id="input-pd-email" name="email" type="email" spellcheck="false" aria-describedby="email-hint" autocomplete="email">
+                <input required="required" class="govuk-input" id="input-pd-email" name="email" type="email" spellcheck="false" aria-describedby="email-hint" autocomplete="email">
               </div>
 
               <div class="govuk-!-padding-bottom-2">
                 <label class="govuk-label" for="password" id="label-pd-password">
                   Create password
                 </label>
-                <input class="govuk-input" id="input-pd-password" name="password" type="password" spellcheck="false" autocomplete="name" minlength="8" required>
+                <input required="required" class="govuk-input" id="input-pd-password" name="password" type="password" spellcheck="false" autocomplete="name" minlength="8" required>
               </div>
 
               <div class="govuk-checkboxes" data-module="govuk-checkboxes">
                 <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input" id="checkbox-pd-show-password" name="show-password" type="checkbox" onclick="ShowPasswordFunctionality()" value="show-password">
+                  <input class="govuk-checkboxes__input" id="checkbox-pd-show-password" name="show-password" type="checkbox" onclick="showPassword()" value="show-password">
                   <label class="govuk-label govuk-checkboxes__label" for="show-password">
                     Show password
                   </label>
@@ -122,12 +122,12 @@
                 <label class="govuk-label" for="confirm-password" id="label-pd-confirm-password">
                   Confirm password
                 </label>
-                <input class="govuk-input" id="input-pd-confirm-password" name="confirm-password" type="password" spellcheck="false" autocomplete="name">
+                <input required="required" class="govuk-input" id="input-pd-confirm-password" name="confirm-password" type="password" spellcheck="false" autocomplete="name">
               </div>
 
               <div class="govuk-checkboxes" data-module="govuk-checkboxes">
                 <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input" id="checkbox-pd-show-confirm-password" name="show-confirm-password" type="checkbox" onclick="ShowPasswordFunctionality()" value="show-confirm-password">
+                  <input class="govuk-checkboxes__input" id="checkbox-pd-show-confirm-password" name="show-confirm-password" type="checkbox" onclick="showConfirmPassword()" value="show-confirm-password">
                   <label class="govuk-label govuk-checkboxes__label" for="show-confirm-password">
                     Show password
                   </label>
@@ -170,6 +170,7 @@
   </footer>
 
   <script src="./govuk.js"></script>
+  <script src="./javascript/personal_details.js"></script>
   <script>
     window.GOVUKFrontend.initAll()
 
