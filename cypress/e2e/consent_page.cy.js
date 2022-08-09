@@ -35,19 +35,37 @@ describe('page contents', () => {
     })
 
     it('checks consent checkboxes', () => {
-        cy.get('#consent-checkbox-stored').should('have.class', 'govuk-checkboxes__input')
-        cy.get('#consent-checkbox-used').should('have.class', 'govuk-checkboxes__input')
-        cy.get('fieldset input').check(['consent-stored', 'consent-used'])
+        cy.get('#consent-checkbox-stored-and-used').should('have.class', 'govuk-checkboxes__input')
+        cy.get('#consent-checkbox-stored-and-used').check()
     })
 
-    it('has a continue button', () => {
-      cy.get('#consent-btn-continue').should('have.class', 'govuk-button')
-      cy.get('#consent-btn-continue').contains('Continue to upload')
+    it('should submit the form when the checkbox is checked', () => {
+      cy.visit('http://localhost:3000/consent')
+      cy.get('#consent-checkbox-stored-and-used').check()
+      cy.get('#consent-form').submit()
+      cy.location('pathname').should('eq', '/document-upload')
+      cy.go('back')
+    })
+
+    it('should fail to submit the form when the checkbox is not checked', () => {
+      cy.visit('http://localhost:3000/consent')
+      cy.get('#consent-checkbox-stored-and-used').uncheck()
+      cy.get('#submit-consent').click()
+      cy.location('pathname').should('eq', '/consent')
+      // cy.go('back')
+    })
+
+    it('has a sign out button', () => {
+      cy.visit('http://localhost:3000/consent')
+      cy.get('#consent-btn-skip-upload').should('have.class', 'govuk-button')
+      cy.get('#consent-btn-skip-upload').contains('Skip upload & sign out')
   })
 
-  it('continue button leads to document type page', () => {
-    cy.get('#consent-btn-continue').click()
-    cy.location('pathname').should('eq', '/document-type')
+  it('sign out button leads to front page', () => {
+    cy.visit('http://localhost:3000/consent')
+    cy.get('#consent-btn-skip-upload').click()
+    cy.location('pathname').should('eq', '/')
+    cy.go('back')
   })
 
 })
