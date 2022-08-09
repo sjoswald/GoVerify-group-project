@@ -81,10 +81,20 @@ describe('testing the personal details page loads', () => {
       cy.get('#btn-pd-save').contains('Save and continue')
     })
 
-    it('save and continue button takes you to the consent page', () => {
+    it('save and continue button raises error if fields are not all completed', () => {
+      cy.get('#input-pd-confirm-password').clear()
+      cy.get('#btn-pd-save').click()
+      cy.location('pathname').should('eq', '/personal-details')
+      // test error message cy.contains('Please fill in this field')
+    })
+
+
+    it('save and continue button takes you to the consent page when all fields are completed', () => {
+      cy.get('input[name="confirm-password"]').type('password123').should('have.value','password123')
       cy.get('#btn-pd-save').click()
       cy.location('pathname').should('eq', '/consent')
     })
+
 
     })
 
