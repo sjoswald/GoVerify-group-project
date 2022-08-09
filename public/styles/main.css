@@ -6817,4 +6817,15 @@ x:-moz-any-link {
   width: 150px;
 }
 
+.buttonWrap {
+  position: relative;
+}
+
+#blocker {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.7);
+}
+
 /*# sourceMappingURL=main.css.map */

@@ -100,32 +100,27 @@
               <div id="consent-hint" class="govuk-hint">
                 <!-- missing hint. See https://design-system.service.gov.uk/components/checkboxes/ -->
               </div>
-              <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+              <form action="/document-upload" id = 'consent-form'>
                 <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input" id="consent-checkbox-stored" name="consent" type="checkbox" value="consent-stored">
-                  <label class="govuk-label govuk-checkboxes__label" for="consent-stored">
-                    I understand and agree that my documents will be stored by Fictional City Council.
-                  </label>
-                </div>
-                <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input" id="consent-checkbox-used" name="consent" type="checkbox" value="consent-used">
-                  <label class="govuk-label govuk-checkboxes__label" for="consent-used">
-                    I understand and agree that my documents may be used for any council services I apply for.
-                  </label>
-                </div>
+                <input type="checkbox" name="checkbox3" class="govuk-checkboxes__input" id="consent-checkbox-stored-and-used" value="yes" required>
+                <label class="govuk-label govuk-checkboxes__label" for="consent-stored-and-used" id="consent-checkbox-stored-and-used">
+                <span> I understand and agree that my documents will be stored by Fictional City Council.  
+                  I understand and agree that my documents may be used for any council services I apply for.</span>
+                </label>
+              </input>
               </div>
+              <br>
+              <div class="govuk-button-group">
+                <input type="submit" id='submit-consent' formaction="/document-upload" class="govuk-button" name ="Continue to upload" value = 'Continue to upload'/>
+                <button id="consent-btn-skip-upload" class="govuk-button govuk-button--secondary" data-module="govuk-button" onclick="window.location.href = '/';">
+                  Skip upload & sign out
+                </button>
+              </div>
+              </form>
             </fieldset>
           </div>
-    
-          <div class="govuk-button-group">
-            <button id="consent-btn-continue" class="govuk-button" data-module="govuk-button" onclick="window.location.href = '/document-type';">
-              Continue to upload
-            </button>
-          
-            <button id="consent-btn-skip-upload" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-              Skip upload & sign out
-            </button>
-          </div>
+
+         
 
         </div>
       </div>
