@@ -77,9 +77,15 @@
         </select>
       </div>
 
-        <button id="btn-doc-type-continue" class="govuk-button" data-module="govuk-button" onclick="window.location.href = '/document-upload';">
-          Continue to upload
-        </button>
+        <div class="govuk-button-group">
+          <button id="btn-doc-type-continue" class="govuk-button" data-module="govuk-button" onclick="window.location.href = '/document-upload';">
+            Continue to upload
+          </button>
+        
+          <button id="btn-doc-type-skip-upload" class="govuk-button govuk-button--secondary" data-module="govuk-button" onclick="window.location.href = '/';">
+            Skip upload & sign out
+          </button>
+        </div>
 
     </main>
   </div>
