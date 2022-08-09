@@ -85,12 +85,16 @@ describe('testing the personal details page loads', () => {
       cy.get('#input-pd-confirm-password').clear()
       cy.get('#btn-pd-save').click()
       cy.location('pathname').should('eq', '/personal-details')
-      // test error message cy.contains('Please fill in this field')
-    })
+     });
 
+     it('has an error if passwords do not match', () => {
+      cy.get('#input-pd-confirm-password').type('password1')
+      cy.get('#btn-pd-save').click()
+      cy.location('pathname').should('eq', '/personal-details')
+     });
 
     it('save and continue button takes you to the consent page when all fields are completed', () => {
-      cy.get('input[name="confirm-password"]').type('password123').should('have.value','password123')
+      cy.get('input[name="confirm-password"]').type('23').should('have.value','password123')
       cy.get('#btn-pd-save').click()
       cy.location('pathname').should('eq', '/consent')
     })

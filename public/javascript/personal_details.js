@@ -15,3 +15,13 @@ function showPassword() {
       input2.type = "password";
     }
   } 
+
+  function onChange() {
+    const password = document.getElementById("input-pd-password");
+    const confirm = document.getElementById("input-pd-confirm-password");
+    if (confirm.value === password.value) {
+      confirm.setCustomValidity('');
+    } else {
+      confirm.setCustomValidity('Passwords do not match');
+    }
+  }
