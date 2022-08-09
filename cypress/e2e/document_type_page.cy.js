@@ -27,6 +27,6 @@ describe('testing the start page loads', () => {
 
       it('continue button leads to upload rules page', () => {
         cy.get('#btn-doc-type-continue').click()
-        cy.location('pathname').should('eq', '/upload-rules')
+        cy.location('pathname').should('eq', '/document-upload')
       })
 })
