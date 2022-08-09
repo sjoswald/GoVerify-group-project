@@ -45,9 +45,27 @@ describe('testing the personal details page loads', () => {
       cy.get('#checkbox-pd-show-password').should('have.class', 'govuk-checkboxes__input')
     })
 
+    it('shows the password when the checkbox is checked, and not otherwise', () => {
+      cy.get('#input-pd-password').should('have.attr', 'type', 'password')
+      cy.get('#checkbox-pd-show-password').check()
+      cy.get('#input-pd-password').should('have.attr', 'type', 'text')
+      cy.get('#checkbox-pd-show-password').uncheck()
+      cy.get('#input-pd-password').should('have.attr', 'type', 'password')
+    })
+
+
     it('has show password checkbox for confirm password field', () => {
       cy.get('#checkbox-pd-show-confirm-password').should('have.class', 'govuk-checkboxes__input')
     })
+
+    it('shows the password when the checkbox is checked, and not otherwise', () => {
+      cy.get('#input-pd-confirm-password').should('have.attr', 'type', 'password')
+      cy.get('#checkbox-pd-show-confirm-password').check()
+      cy.get('#input-pd-confirm-password').should('have.attr', 'type', 'text')
+      cy.get('#checkbox-pd-show-confirm-password').uncheck()
+      cy.get('#input-pd-confirm-password').should('have.attr', 'type', 'password')
+    })
+
       // test - two passwords should match - otherwise error message
 
     it('has details about choosing a password', () => {
@@ -63,10 +81,24 @@ describe('testing the personal details page loads', () => {
       cy.get('#btn-pd-save').contains('Save and continue')
     })
 
-    it('save and continue button takes you to the consent page', () => {
+    it('save and continue button raises error if fields are not all completed', () => {
+      cy.get('#input-pd-confirm-password').clear()
+      cy.get('#btn-pd-save').click()
+      cy.location('pathname').should('eq', '/personal-details')
+     });
+
+     it('has an error if passwords do not match', () => {
+      cy.get('#input-pd-confirm-password').type('password1')
+      cy.get('#btn-pd-save').click()
+      cy.location('pathname').should('eq', '/personal-details')
+     });
+
+    it('save and continue button takes you to the consent page when all fields are completed', () => {
+      cy.get('input[name="confirm-password"]').type('23').should('have.value','password123')
       cy.get('#btn-pd-save').click()
       cy.location('pathname').should('eq', '/consent')
     })
+
 
     })
 
