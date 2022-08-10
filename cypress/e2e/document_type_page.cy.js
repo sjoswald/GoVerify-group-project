@@ -28,5 +28,17 @@ describe('testing the start page loads', () => {
       it('continue button leads to upload rules page', () => {
         cy.get('#btn-doc-type-continue').click()
         cy.location('pathname').should('eq', '/document-upload')
+        cy.go('back')
+      })
+
+      it('has a continue button', () => {
+        cy.get('#btn-doc-type-skip-upload').should('have.class', 'govuk-button')
+        cy.get('#btn-doc-type-skip-upload').contains('Skip upload & sign out')
+    })
+
+      it('continue button leads to upload rules page', () => {
+        cy.get('#btn-doc-type-skip-upload').click()
+        cy.location('pathname').should('eq', '/')
+        cy.go('back')
       })
 })
